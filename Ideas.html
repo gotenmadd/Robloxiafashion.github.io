@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Complatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/imagenes/Icono.png" type="image/png">
+    <title>Ideas</title>
+    <link rel="stylesheet" href="menu.css">
+    <style>
+        body {
+            background-color: #f0f0f0; /* Cambia el color de fondo si lo deseas */
+        }
+
+        #formulario {
+            width: 50%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff; /* Color de fondo del formulario */
+            border: 2px solid #3399ff; /* Borde del formulario */
+        }
+
+        label {
+            color: #ffffff; /* Color del texto */
+        }
+
+        input[type="text"],
+        input[type="file"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #999999; /* Color del botón */
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #999999; /* Color del botón al pasar el ratón por encima */
+        }
+    </style>
+</head>
+<body>
+    <center><img src="/imagenes/ideas.png"  alt=""></center>
+    <nav>
+        <button><a href="Sobre Roblox.html" class="nav-enlace" onclick="action()">Sobre Roblox</a></button>
+        <button><a href="Grupos.html" class="nav-enlace" onclick="action()">Grupos</a></button>
+        <button><a href="index.html" class="nav-enlace" onclick="action()">Ideas</a></button>
+    </nav>
+
+    <h2>Subir una Idea</h2>
+    <form id="formulario" action="#" method="post" enctype="multipart/form-data">
+        <label for="idea">Tu Idea:</label><br>
+        <textarea id="idea" name="idea" rows="4" cols="50"></textarea><br>
+        <label for="imagen">Subir imagen:</label><br>
+        <input type="file" id="imagen" name="imagen" onchange="previewImage(event)"><br>
+        <input type="submit" value="Enviar">
+    </form>
+
+    <div id="imagenes-container"></div>
+
+    <script>
+        function previewImage(event) {
+            var reader = new FileReader();
+            reader.onload = function() {
+                var imagenPreview = document.createElement('div');
+                imagenPreview.classList.add('imagen-preview');
+                imagenPreview.innerHTML = '<img src="' + reader.result + '" style="max-width: 300px; max-height: 300px;" />';
+                
+                var container = document.getElementById('imagenes-container');
+                container.insertBefore(imagenPreview, container.firstChild);
+            }
+            reader.readAsDataURL(event.target.files[0]);
+        }
+    </script>
+<p>
+
+    <center><img src="/imagenes/ideasimage.jpg" width="53%">
+    </center></p>
+
+
+
+    <footer>
+        <center>
+            <address><a  title="Roblox"   href="https://www.roblox.com/users/1800828098/profile"> <img src="/imagenes/RLOGO.png" alt="Roblox" width="50" height="50">
+              
+              <a  title="Pinterest"   href="https://mx.pinterest.com/gotenmadd0004/"> <img src="/imagenes/Pinterestlogo.png" alt="Pinteres"  width="50"  height="50">  
+              
+                <p>Creada por gotemadd</p>  
+    
+                <p>Email:gotenmadd@gmail.com</p>   </a>
+             
+             
+    
+            </address>
+    
+    
+        </center>
+    
+    
+    
+    </footer>
+    
+
+</body>
+
+
+</html>
+

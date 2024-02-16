@@ -1,0 +1,44 @@
+.nav-enlace{
+  display: inline-block;
+  background-color: rgba(39, 39, 39, 0.041);
+  color: black;
+  padding: 10px 40px;
+  }
+
+
+  .nav-enlace:hover{
+      background-color: rgb(167, 91, 255);
+  }
+  nav{
+      background-color: rgba(183, 2, 255, 0);
+      padding: 5px;
+      display: flex;
+      justify-content: center;
+  }
+  button{
+      background-color: rgb(120, 0, 218);
+      color: rgba(84, 2, 151, 0);
+  }
+  body{
+    background-color: rgba(132, 0, 255, 0);
+
+
+
+  }
+  body{
+
+  background-image: url("/imagenes/1.jpg")
+
+
+  }
+  button:hover {
+    transform: scale(1.1); /* Cambia el valor según sea necesario para el tamaño de crecimiento */
+  }
+
+
+
+  footer{
+
+    background-color: rgb(54, 54, 54);
+
+  }
